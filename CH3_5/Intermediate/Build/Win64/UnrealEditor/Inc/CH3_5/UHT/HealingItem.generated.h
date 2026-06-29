@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_HealingItem_h_10_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AHealingItem(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AHealingItem(AHealingItem&&); \

@@ -35,31 +35,31 @@ struct Z_Construct_UClass_AMineItem_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionDelay_MetaData[] = {
 		{ "Category", "Mine" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xdf\xb1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc9\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc3\xb0\xef\xbf\xbd (5\xef\xbf\xbd\xef\xbf\xbd)\n" },
+		{ "Comment", "// \xed\x8f\xad\xeb\xb0\x9c\xea\xb9\x8c\xec\xa7\x80 \xea\xb1\xb8\xeb\xa6\xac\xeb\x8a\x94 \xec\x8b\x9c\xea\xb0\x84 (5\xec\xb4\x88)\n" },
 #endif
 		{ "ModuleRelativePath", "Public/MineItem.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xdf\xb1\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc9\xb8\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc3\xb0\xef\xbf\xbd (5\xef\xbf\xbd\xef\xbf\xbd)" },
+		{ "ToolTip", "\xed\x8f\xad\xeb\xb0\x9c\xea\xb9\x8c\xec\xa7\x80 \xea\xb1\xb8\xeb\xa6\xac\xeb\x8a\x94 \xec\x8b\x9c\xea\xb0\x84 (5\xec\xb4\x88)" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionRadius_MetaData[] = {
 		{ "Category", "Mine" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+		{ "Comment", "// \xed\x8f\xad\xeb\xb0\x9c \xeb\xb2\x94\xec\x9c\x84\n" },
 #endif
 		{ "ModuleRelativePath", "Public/MineItem.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+		{ "ToolTip", "\xed\x8f\xad\xeb\xb0\x9c \xeb\xb2\x94\xec\x9c\x84" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosionDamage_MetaData[] = {
 		{ "Category", "Mine" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+		{ "Comment", "//\xed\x8f\xad\xeb\xb0\x9c \xeb\x8d\xb0\xeb\xaf\xb8\xec\xa7\x80\n" },
 #endif
 		{ "ModuleRelativePath", "Public/MineItem.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+		{ "ToolTip", "\xed\x8f\xad\xeb\xb0\x9c \xeb\x8d\xb0\xeb\xaf\xb8\xec\xa7\x80" },
 #endif
 	};
 #endif // WITH_METADATA
@@ -114,7 +114,6 @@ template<> CH3_5_API UClass* StaticClass<AMineItem>()
 {
 	return AMineItem::StaticClass();
 }
-AMineItem::AMineItem() {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AMineItem);
 AMineItem::~AMineItem() {}
 // End Class AMineItem
@@ -123,10 +122,10 @@ AMineItem::~AMineItem() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_MineItem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMineItem, AMineItem::StaticClass, TEXT("AMineItem"), &Z_Registration_Info_UClass_AMineItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMineItem), 1099961496U) },
+		{ Z_Construct_UClass_AMineItem, AMineItem::StaticClass, TEXT("AMineItem"), &Z_Registration_Info_UClass_AMineItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMineItem), 589277112U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_MineItem_h_3387013195(TEXT("/Script/CH3_5"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_MineItem_h_958147736(TEXT("/Script/CH3_5"),
 	Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_MineItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_MineItem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

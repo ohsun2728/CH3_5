@@ -5,6 +5,8 @@
 #include "ItemInterface.h"
 #include "BaseItem.generated.h"
 
+class USphereComponent;
+
 UCLASS()
 class CH3_5_API ABaseItem : public AActor, public IItemInterface
 {
@@ -14,20 +16,39 @@ public:
 	ABaseItem();
 
 protected:
-	virtual void BeginPlay() override;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 	FName ItemType;
 
-	// ItemInterface¿¡¼­ ¿ä±¸ÇÏ´Â ÇÔ¼öµéÀ» ¹İµå½Ã ±¸Çö
-	virtual void OnItemOverlap(AActor* OverlapActor) override;
-	virtual void OnItemEndOverlap(AActor* OverlapActor) override;
+	// ë£¨íŠ¸ ì»´í¬ë„ŒíŠ¸ (ì”¬)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item|Component")
+	USceneComponent* Scene;
+	// ì¶©ëŒ ì»´í¬ë„ŒíŠ¸ (í”Œë ˆì´ì–´ ì§„ì… ë²”ìœ„ ê°ì§€ìš©)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item|Component")
+	USphereComponent* Collision;
+	// ì•„ì´í…œ ì‹œê° í‘œí˜„ìš© ìŠ¤íƒœí‹± ë©”ì‹œ
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Item|Component")
+	UStaticMeshComponent* StaticMesh;
+
+	UFUNCTION()
+	virtual void OnItemOverlap(
+		UPrimitiveComponent* OverlappedComp,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult) override;
+
+	UFUNCTION()
+	virtual void OnItemEndOverlap(
+		UPrimitiveComponent* OverlapComp,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex) override;
 	virtual void ActivateItem(AActor* Activator) override;
 	virtual FName GetItemType() const override;
 
-	// ¾ÆÀÌÅÛÀ» Á¦°ÅÇÏ´Â °øÅë ÇÔ¼ö (Ãß°¡ ÀÌÆåÆ®³ª ·ÎÁ÷À» ³ÖÀ» ¼ö ÀÖ´Ù)
+	// ì•„ì´í…œì„ ì œê±°í•˜ëŠ” ê³µí†µ í•¨ìˆ˜ (ì¶”ê°€ ì´í™íŠ¸ë‚˜ ë¡œì§ì„ ë„£ì„ ìˆ˜ ìˆë‹¤)
 	virtual void DestroyItem();
-public:	
-	virtual void Tick(float DeltaTime) override;
+
 
 };

@@ -9,6 +9,9 @@ class CH3_5_API AHealingItem : public ABaseItem
 {
 	GENERATED_BODY()
 	
+public:
+	AHealingItem();
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
 	float HealAmount;
 

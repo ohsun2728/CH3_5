@@ -48,9 +48,6 @@
     <ClCompile Include="..\..\Source\CH3_5\Private\CH3_5_Player.cpp">
       <Filter>Source\CH3_5\Private</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\CH3_5\Private\ItemInterface.cpp">
-      <Filter>Source\CH3_5\Private</Filter>
-    </ClCompile>
     <Filter Include="Source\CH3_5\Public">
       <UniqueIdentifier>{3126C030-D1CA-3C35-8B6C-B1434422610F}</UniqueIdentifier>
     </Filter>
@@ -58,9 +55,6 @@
       <Filter>Source\CH3_5\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\CH3_5\Public\CH3_5_Player.h">
-      <Filter>Source\CH3_5\Public</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\CH3_5\Public\ItemInterface.h">
       <Filter>Source\CH3_5\Public</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,6 +107,12 @@
       <Filter>Source\CH3_5\Private\Item.cpp\CoinItem.cpp</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\CH3_5\Private\SmallCoinItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp\CoinItem.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\ItemInterface.h">
+      <Filter>Source\CH3_5\Public\Item.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\ItemInterface.cpp">
       <Filter>Source\CH3_5\Private\Item.cpp\CoinItem.cpp</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,0 +1,17 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/Items/BP_BigCoinItem.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/Items/BP_HealingItem.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/Items/BP_MineItem.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/Items/BP_SmallCoinItem.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/ThirdPerson/Maps/ThirdPersonMap_BuiltData.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/StarterContent/Architecture/Floor_400x400.uasset"
+			]
+		}
+	]
+}

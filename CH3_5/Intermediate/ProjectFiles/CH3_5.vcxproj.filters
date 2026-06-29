@@ -64,4 +64,56 @@
       <Filter>Source\CH3_5\Public</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\CH3_5\Public\Item.h">
+      <UniqueIdentifier>{ddf5b81e-2e17-4d4f-bde4-84d19288558b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\CH3_5\Public\Item.h\CoinItem.h">
+      <UniqueIdentifier>{03e4e6e7-8942-4f53-83b2-73791b3e75f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\CH3_5\Private\Item.cpp">
+      <UniqueIdentifier>{9dec158a-8844-44d9-955b-23af72755d55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\CH3_5\Private\Item.cpp\CoinItem.cpp">
+      <UniqueIdentifier>{20579924-0e54-49d1-b67e-852eb3e7d637}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\CH3_5\Public\BaseItem.h">
+      <Filter>Source\CH3_5\Public\Item.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\HealingItem.h">
+      <Filter>Source\CH3_5\Public\Item.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\MineItem.h">
+      <Filter>Source\CH3_5\Public\Item.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\BigCoinItem.h">
+      <Filter>Source\CH3_5\Public\Item.h\CoinItem.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\SmallCoinItem.h">
+      <Filter>Source\CH3_5\Public\Item.h\CoinItem.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\CoinItem.h">
+      <Filter>Source\CH3_5\Public\Item.h\CoinItem.h</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\HealingItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\MineItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\BaseItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\CoinItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp\CoinItem.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\BigCoinItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp\CoinItem.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\SmallCoinItem.cpp">
+      <Filter>Source\CH3_5\Private\Item.cpp\CoinItem.cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

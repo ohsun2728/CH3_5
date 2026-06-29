@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CH3_5_ItemInterface_generated_h
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	CH3_5_API UItemInterface(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -28,7 +28,7 @@ public: \
 	CH3_5_API virtual ~UItemInterface();
 
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_GENERATED_UINTERFACE_BODY() \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_GENERATED_UINTERFACE_BODY() \
 private: \
 	static void StaticRegisterNativesUItemInterface(); \
 	friend struct Z_Construct_UClass_UItemInterface_Statics; \
@@ -37,15 +37,15 @@ public: \
 	DECLARE_SERIALIZER(UItemInterface)
 
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_GENERATED_BODY \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_GENERATED_BODY \
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS \
-	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_GENERATED_UINTERFACE_BODY() \
-	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_GENERATED_UINTERFACE_BODY() \
+	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_INCLASS_IINTERFACE_NO_PURE_DECLS \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
 protected: \
 	virtual ~IItemInterface() {} \
 public: \
@@ -54,11 +54,11 @@ public: \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_PROLOG
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_21_GENERATED_BODY \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_7_PROLOG
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_13_INCLASS_IINTERFACE_NO_PURE_DECLS \
+	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_ItemInterface_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CH3_5_CH3_5_Player_generated_h
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACH3_5_Player(); \
 	friend struct Z_Construct_UClass_ACH3_5_Player_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ACH3_5_Player)
 
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACH3_5_Player(ACH3_5_Player&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ACH3_5_Player();
 
 
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_9_PROLOG
-#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_12_GENERATED_BODY \
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_7_PROLOG
+#define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_Player_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -6,6 +6,7 @@
 #include "BaseItem.generated.h"
 
 class USphereComponent;
+class UStaticMeshCompoent;
 
 UCLASS()
 class CH3_5_API ABaseItem : public AActor, public IItemInterface

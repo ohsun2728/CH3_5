@@ -1,4 +1,5 @@
 #include "HealingItem.h"
+#include "CH3_5_Player.h"
 
 AHealingItem::AHealingItem()
 {
@@ -8,6 +9,14 @@ AHealingItem::AHealingItem()
 
 void AHealingItem::ActivateItem(AActor* Activator)
 {
-	// 플레이어 캐릭터의 체력을 20만큼 회복시키는 로직 등을 구현
-	DestroyItem();
+	if (Activator && Activator->ActorHasTag("Player"))
+	{
+		if (ACH3_5_Player* PlayerCharacter = Cast<ACH3_5_Player>(Activator))
+		{
+			// 캐릭터의 체력을 회복
+			PlayerCharacter->AddHealth(HealAmount);
+		}
+
+		DestroyItem();
+	}
 }

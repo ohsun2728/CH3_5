@@ -11,6 +11,7 @@
     <None Include="..\..\Source\CH3_5Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +38,30 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\CH3_5\CH3_5.h">
       <Filter>Source\CH3_5</Filter>
+    </ClCompile>
+    <Filter Include="Source\CH3_5\Private">
+      <UniqueIdentifier>{3BDA1F7D-48ED-3E05-AF88-2586F8C459B8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\CH3_5\Private\CH3_5_GameMode.cpp">
+      <Filter>Source\CH3_5\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\CH3_5_Player.cpp">
+      <Filter>Source\CH3_5\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Private\ItemInterface.cpp">
+      <Filter>Source\CH3_5\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\CH3_5\Public">
+      <UniqueIdentifier>{3126C030-D1CA-3C35-8B6C-B1434422610F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\CH3_5\Public\CH3_5_GameMode.h">
+      <Filter>Source\CH3_5\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\CH3_5_Player.h">
+      <Filter>Source\CH3_5\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CH3_5\Public\ItemInterface.h">
+      <Filter>Source\CH3_5\Public</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

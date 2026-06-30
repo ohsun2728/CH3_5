@@ -248,7 +248,7 @@ void ACH3_5_GameState::OnGameOver()
 		if (ACH3_5_PlayerController* CH3_5_PlayerController = Cast<ACH3_5_PlayerController>(PlayerController))
 		{
 			CH3_5_PlayerController->SetPause(true);
-			CH3_5_PlayerController->ShowMainMenu(true);
+			CH3_5_PlayerController->ShowGameOverMenu();
 		}
 	}
 }

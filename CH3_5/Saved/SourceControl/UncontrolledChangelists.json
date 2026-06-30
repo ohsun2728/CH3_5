@@ -5,25 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Inputs/IMC_Default.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Maps/CH3_5_Level_1.umap",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/System/BP_CH3_5_GameMode.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/BP_CH3_5_GameMode.uasset",
 				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/System/BP_CH3_5_PlayerController.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/System/BP_SpawnVolume.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/System/BP_CH3_5_GameState.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_HUD.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_MainMenu.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_HP.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/Chracter/BP_CH3_5_Player.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/DT_ItemSpawn.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Maps/CH3_5_Level_2.umap",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Maps/CH3_5_Level_3.umap",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/WBP_HUD.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/System/BP_CH3_5_GameStateBase.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/BP_SpawnVolume.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/BP_CH3_5_GameStateBase.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/BP_CH3_5_PlayerController.uasset"
+				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_GameOver.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_MainMenu.uasset"
 			]
 		}
 	]

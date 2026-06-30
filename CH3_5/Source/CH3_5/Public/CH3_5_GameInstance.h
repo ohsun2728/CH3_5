@@ -1,4 +1,4 @@
-#pragma once
+癤�#pragma once
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
@@ -12,12 +12,14 @@ class CH3_5_API UCH3_5_GameInstance : public UGameInstance
 public:
 	UCH3_5_GameInstance();
 
-	// 게임 전체 누적 점수
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "GameData")
 	int32 TotalScore;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "GameData")
 	int32 CurrentLevelIndex;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "GameData")
+	bool bShouldShowMainMenu;
 
 	UFUNCTION(BlueprintCallable, Category = "GameData")
 	void AddToScore(int32 Amount);

@@ -65,6 +65,66 @@ DEFINE_FUNCTION(ACH3_5_PlayerController::execGetHUDWidget)
 }
 // End Class ACH3_5_PlayerController Function GetHUDWidget
 
+// Begin Class ACH3_5_PlayerController Function GoToMainMenu
+struct Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Menu" },
+		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACH3_5_PlayerController, nullptr, "GoToMainMenu", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACH3_5_PlayerController::execGoToMainMenu)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GoToMainMenu();
+	P_NATIVE_END;
+}
+// End Class ACH3_5_PlayerController Function GoToMainMenu
+
+// Begin Class ACH3_5_PlayerController Function QuitGame
+struct Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Menu" },
+		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACH3_5_PlayerController, nullptr, "QuitGame", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACH3_5_PlayerController::execQuitGame)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->QuitGame();
+	P_NATIVE_END;
+}
+// End Class ACH3_5_PlayerController Function QuitGame
+
 // Begin Class ACH3_5_PlayerController Function ShowGameHUD
 struct Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameHUD_Statics
 {
@@ -95,35 +155,48 @@ DEFINE_FUNCTION(ACH3_5_PlayerController::execShowGameHUD)
 }
 // End Class ACH3_5_PlayerController Function ShowGameHUD
 
-// Begin Class ACH3_5_PlayerController Function ShowMainMenu
-struct Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics
+// Begin Class ACH3_5_PlayerController Function ShowGameOverMenu
+struct Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu_Statics
 {
-	struct CH3_5_PlayerController_eventShowMainMenu_Parms
-	{
-		bool bIsRestart;
-	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Menu" },
 		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
 	};
 #endif // WITH_METADATA
-	static void NewProp_bIsRestart_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsRestart;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-void Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::NewProp_bIsRestart_SetBit(void* Obj)
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACH3_5_PlayerController, nullptr, "ShowGameOverMenu", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu()
 {
-	((CH3_5_PlayerController_eventShowMainMenu_Parms*)Obj)->bIsRestart = 1;
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu_Statics::FuncParams);
+	}
+	return ReturnFunction;
 }
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::NewProp_bIsRestart = { "bIsRestart", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(CH3_5_PlayerController_eventShowMainMenu_Parms), &Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::NewProp_bIsRestart_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::NewProp_bIsRestart,
+DEFINE_FUNCTION(ACH3_5_PlayerController::execShowGameOverMenu)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowGameOverMenu();
+	P_NATIVE_END;
+}
+// End Class ACH3_5_PlayerController Function ShowGameOverMenu
+
+// Begin Class ACH3_5_PlayerController Function ShowMainMenu
+struct Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Menu" },
+		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACH3_5_PlayerController, nullptr, "ShowMainMenu", nullptr, nullptr, Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::CH3_5_PlayerController_eventShowMainMenu_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::CH3_5_PlayerController_eventShowMainMenu_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACH3_5_PlayerController, nullptr, "ShowMainMenu", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu_Statics::Function_MetaDataParams) };
 UFunction* Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -135,10 +208,9 @@ UFunction* Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu()
 }
 DEFINE_FUNCTION(ACH3_5_PlayerController::execShowMainMenu)
 {
-	P_GET_UBOOL(Z_Param_bIsRestart);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->ShowMainMenu(Z_Param_bIsRestart);
+	P_THIS->ShowMainMenu();
 	P_NATIVE_END;
 }
 // End Class ACH3_5_PlayerController Function ShowMainMenu
@@ -179,7 +251,10 @@ void ACH3_5_PlayerController::StaticRegisterNativesACH3_5_PlayerController()
 	UClass* Class = ACH3_5_PlayerController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetHUDWidget", &ACH3_5_PlayerController::execGetHUDWidget },
+		{ "GoToMainMenu", &ACH3_5_PlayerController::execGoToMainMenu },
+		{ "QuitGame", &ACH3_5_PlayerController::execQuitGame },
 		{ "ShowGameHUD", &ACH3_5_PlayerController::execShowGameHUD },
+		{ "ShowGameOverMenu", &ACH3_5_PlayerController::execShowGameOverMenu },
 		{ "ShowMainMenu", &ACH3_5_PlayerController::execShowMainMenu },
 		{ "StartGame", &ACH3_5_PlayerController::execStartGame },
 	};
@@ -232,6 +307,15 @@ struct Z_Construct_UClass_ACH3_5_PlayerController_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameOverWidgetClass_MetaData[] = {
+		{ "Category", "Menu" },
+		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameOverWidgetInstance_MetaData[] = {
+		{ "Category", "Menu" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CH3_5_PlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InputMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
@@ -241,12 +325,17 @@ struct Z_Construct_UClass_ACH3_5_PlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HUDWidgetInstance;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_MainMenuWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainMenuWidgetInstance;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_GameOverWidgetClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GameOverWidgetInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACH3_5_PlayerController_GetHUDWidget, "GetHUDWidget" }, // 1065481906
+		{ &Z_Construct_UFunction_ACH3_5_PlayerController_GoToMainMenu, "GoToMainMenu" }, // 755477959
+		{ &Z_Construct_UFunction_ACH3_5_PlayerController_QuitGame, "QuitGame" }, // 3553408894
 		{ &Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameHUD, "ShowGameHUD" }, // 1140917383
-		{ &Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu, "ShowMainMenu" }, // 236330623
+		{ &Z_Construct_UFunction_ACH3_5_PlayerController_ShowGameOverMenu, "ShowGameOverMenu" }, // 3668178017
+		{ &Z_Construct_UFunction_ACH3_5_PlayerController_ShowMainMenu, "ShowMainMenu" }, // 564584661
 		{ &Z_Construct_UFunction_ACH3_5_PlayerController_StartGame, "StartGame" }, // 3360085930
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -263,6 +352,8 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACH3_5_PlayerCo
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_HUDWidgetInstance = { "HUDWidgetInstance", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACH3_5_PlayerController, HUDWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HUDWidgetInstance_MetaData), NewProp_HUDWidgetInstance_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_MainMenuWidgetClass = { "MainMenuWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACH3_5_PlayerController, MainMenuWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetClass_MetaData), NewProp_MainMenuWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_MainMenuWidgetInstance = { "MainMenuWidgetInstance", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACH3_5_PlayerController, MainMenuWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetInstance_MetaData), NewProp_MainMenuWidgetInstance_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_GameOverWidgetClass = { "GameOverWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACH3_5_PlayerController, GameOverWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameOverWidgetClass_MetaData), NewProp_GameOverWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_GameOverWidgetInstance = { "GameOverWidgetInstance", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACH3_5_PlayerController, GameOverWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameOverWidgetInstance_MetaData), NewProp_GameOverWidgetInstance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACH3_5_PlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_InputMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_MoveAction,
@@ -272,6 +363,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACH3_5_Pl
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_HUDWidgetInstance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_MainMenuWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_MainMenuWidgetInstance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_GameOverWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACH3_5_PlayerController_Statics::NewProp_GameOverWidgetInstance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACH3_5_PlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACH3_5_PlayerController_Statics::DependentSingletons[])() = {
@@ -314,10 +407,10 @@ ACH3_5_PlayerController::~ACH3_5_PlayerController() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_PlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACH3_5_PlayerController, ACH3_5_PlayerController::StaticClass, TEXT("ACH3_5_PlayerController"), &Z_Registration_Info_UClass_ACH3_5_PlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACH3_5_PlayerController), 3393490540U) },
+		{ Z_Construct_UClass_ACH3_5_PlayerController, ACH3_5_PlayerController::StaticClass, TEXT("ACH3_5_PlayerController"), &Z_Registration_Info_UClass_ACH3_5_PlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACH3_5_PlayerController), 548510186U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_PlayerController_h_4037710240(TEXT("/Script/CH3_5"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_PlayerController_h_3970498107(TEXT("/Script/CH3_5"),
 	Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_PlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_PlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

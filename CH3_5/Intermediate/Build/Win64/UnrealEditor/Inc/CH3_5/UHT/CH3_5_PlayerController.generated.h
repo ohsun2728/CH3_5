@@ -16,8 +16,11 @@ class UUserWidget;
 #define CH3_5_CH3_5_PlayerController_generated_h
 
 #define FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_PlayerController_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execQuitGame); \
+	DECLARE_FUNCTION(execGoToMainMenu); \
 	DECLARE_FUNCTION(execStartGame); \
 	DECLARE_FUNCTION(execShowGameHUD); \
+	DECLARE_FUNCTION(execShowGameOverMenu); \
 	DECLARE_FUNCTION(execShowMainMenu); \
 	DECLARE_FUNCTION(execGetHUDWidget);
 

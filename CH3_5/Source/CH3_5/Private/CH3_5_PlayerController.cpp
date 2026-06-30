@@ -1,11 +1,13 @@
-#include "CH3_5_PlayerController.h"
+﻿#include "CH3_5_PlayerController.h"
 #include "CH3_5_GameInstance.h"
 #include "CH3_5_GameState.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "Components/TextBlock.h"
+#include "UObject/ConstructorHelpers.h"
 
 ACH3_5_PlayerController::ACH3_5_PlayerController()
     : InputMappingContext(nullptr),
@@ -15,7 +17,9 @@ ACH3_5_PlayerController::ACH3_5_PlayerController()
     HUDWidgetClass(nullptr),
     HUDWidgetInstance(nullptr),
     MainMenuWidgetClass(nullptr),
-    MainMenuWidgetInstance(nullptr)
+    MainMenuWidgetInstance(nullptr),
+    GameOverWidgetClass(nullptr),
+    GameOverWidgetInstance(nullptr)
 {
 }
 
@@ -35,9 +39,32 @@ void ACH3_5_PlayerController::BeginPlay()
     }
 
     FString CurrentMapName = GetWorld()->GetMapName();
-    if (CurrentMapName.Contains("MenuLevel"))
+    
+    // Print diagnostic information
+    FString ClassName = GetClass()->GetName();
+    FString MainMenuClassStr = MainMenuWidgetClass ? MainMenuWidgetClass->GetName() : TEXT("NULL");
+    FString GameOverClassStr = GameOverWidgetClass ? GameOverWidgetClass->GetName() : TEXT("NULL");
+
+    UE_LOG(LogTemp, Warning, TEXT("--- BeginPlay Diagnostic ---"));
+    UE_LOG(LogTemp, Warning, TEXT("Active Controller: %s"), *ClassName);
+    UE_LOG(LogTemp, Warning, TEXT("Map Name: %s"), *CurrentMapName);
+    UE_LOG(LogTemp, Warning, TEXT("MainMenuClass: %s"), *MainMenuClassStr);
+    UE_LOG(LogTemp, Warning, TEXT("GameOverClass: %s"), *GameOverClassStr);
+
+    if (GEngine)
     {
-        ShowMainMenu(false);
+        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Active Controller: %s"), *ClassName));
+        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Map Name: %s"), *CurrentMapName));
+        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("MainMenuClass: %s"), *MainMenuClassStr));
+        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("GameOverClass: %s"), *GameOverClassStr));
+    }
+
+    if (UCH3_5_GameInstance* CH3_5_GameInstance = Cast<UCH3_5_GameInstance>(UGameplayStatics::GetGameInstance(this)))
+    {
+        if (CH3_5_GameInstance->bShouldShowMainMenu)
+        {
+            ShowMainMenu();
+        }
     }
 }
 
@@ -46,23 +73,32 @@ UUserWidget* ACH3_5_PlayerController::GetHUDWidget() const
     return HUDWidgetInstance;
 }
 
-void ACH3_5_PlayerController::ShowMainMenu(bool bIsRestart)
+void ACH3_5_PlayerController::ShowMainMenu()
 {
-	// HUD가 켜져 있다면 닫기
+	UE_LOG(LogTemp, Warning, TEXT("ShowMainMenu called!"));
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("ShowMainMenu called!"));
+	}
+
 	if (HUDWidgetInstance)
 	{
 		HUDWidgetInstance->RemoveFromParent();
 		HUDWidgetInstance = nullptr;
 	}
 
-	// 이미 메뉴가 떠 있으면 제거
+	if (GameOverWidgetInstance)
+	{
+		GameOverWidgetInstance->RemoveFromParent();
+		GameOverWidgetInstance = nullptr;
+	}
+
 	if (MainMenuWidgetInstance)
 	{
 		MainMenuWidgetInstance->RemoveFromParent();
 		MainMenuWidgetInstance = nullptr;
 	}
 
-	// 메뉴 UI 생성
 	if (MainMenuWidgetClass)
 	{
 		MainMenuWidgetInstance = CreateWidget<UUserWidget>(this, MainMenuWidgetClass);
@@ -72,57 +108,78 @@ void ACH3_5_PlayerController::ShowMainMenu(bool bIsRestart)
 
 			bShowMouseCursor = true;
 			SetInputMode(FInputModeUIOnly());
+			SetPause(true);
 		}
-
-		if (UTextBlock* ButtonText = Cast<UTextBlock>(MainMenuWidgetInstance->GetWidgetFromName(TEXT("StartButtonText"))))
+		else
 		{
-			if (bIsRestart)
+			UE_LOG(LogTemp, Error, TEXT("Failed to Create Widget: MainMenuWidgetInstance"));
+			if (GEngine)
 			{
-				ButtonText->SetText(FText::FromString(TEXT("Restart")));
-			}
-			else
-			{
-				ButtonText->SetText(FText::FromString(TEXT("Start")));
-			}
-		}
-
-		if (bIsRestart)
-		{
-			UFunction* PlayAnimFunc = MainMenuWidgetInstance->FindFunction(FName("PlayGameOverAnim"));
-			if (PlayAnimFunc)
-			{
-				MainMenuWidgetInstance->ProcessEvent(PlayAnimFunc, nullptr);
-			}
-
-			if (UTextBlock* TotalScoreText = Cast<UTextBlock>(MainMenuWidgetInstance->GetWidgetFromName("TotalScoreText")))
-			{
-				if (UCH3_5_GameInstance* CH3_5_GameInstance = Cast<UCH3_5_GameInstance>(UGameplayStatics::GetGameInstance(this)))
-				{
-					TotalScoreText->SetText(FText::FromString(
-						FString::Printf(TEXT("Total Score: %d"), CH3_5_GameInstance->TotalScore)
-					));
-				}
+				GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, TEXT("Failed to Create MainMenuWidget!"));
 			}
 		}
 	}
-
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("MainMenuWidgetClass is NULL in ShowMainMenu"));
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, TEXT("MainMenuWidgetClass is NULL!"));
+		}
+	}
 }
 
-// 게임 HUD 표시
-void ACH3_5_PlayerController::ShowGameHUD()
+void ACH3_5_PlayerController::ShowGameOverMenu()
 {
-	// HUD가 켜져 있다면 닫기
 	if (HUDWidgetInstance)
 	{
 		HUDWidgetInstance->RemoveFromParent();
 		HUDWidgetInstance = nullptr;
 	}
 
-	// 이미 메뉴가 떠 있으면 제거
 	if (MainMenuWidgetInstance)
 	{
 		MainMenuWidgetInstance->RemoveFromParent();
 		MainMenuWidgetInstance = nullptr;
+	}
+
+	if (GameOverWidgetInstance)
+	{
+		GameOverWidgetInstance->RemoveFromParent();
+		GameOverWidgetInstance = nullptr;
+	}
+
+	if (GameOverWidgetClass)
+	{
+		GameOverWidgetInstance = CreateWidget<UUserWidget>(this, GameOverWidgetClass);
+		if (GameOverWidgetInstance)
+		{
+			GameOverWidgetInstance->AddToViewport();
+
+			bShowMouseCursor = true;
+			SetInputMode(FInputModeUIOnly());
+		}
+	}
+}
+
+void ACH3_5_PlayerController::ShowGameHUD()
+{
+	if (HUDWidgetInstance)
+	{
+		HUDWidgetInstance->RemoveFromParent();
+		HUDWidgetInstance = nullptr;
+	}
+
+	if (MainMenuWidgetInstance)
+	{
+		MainMenuWidgetInstance->RemoveFromParent();
+		MainMenuWidgetInstance = nullptr;
+	}
+
+	if (GameOverWidgetInstance)
+	{
+		GameOverWidgetInstance->RemoveFromParent();
+		GameOverWidgetInstance = nullptr;
 	}
 
 	if (HUDWidgetClass)
@@ -144,16 +201,37 @@ void ACH3_5_PlayerController::ShowGameHUD()
 	}
 }
 
-// 게임 시작 - CH3_5_Level_1 이동, GameInstance 데이터 초기화
 void ACH3_5_PlayerController::StartGame()
 {
 	if (UCH3_5_GameInstance* CH3_5_GameInstance = Cast<UCH3_5_GameInstance>(UGameplayStatics::GetGameInstance(this)))
 	{
 		CH3_5_GameInstance->CurrentLevelIndex = 0;
 		CH3_5_GameInstance->TotalScore = 0;
+		CH3_5_GameInstance->bShouldShowMainMenu = false;
 	}
 
-	UGameplayStatics::OpenLevel(GetWorld(), FName("CH3_5_Level_1"));
 	SetPause(false);
+	UGameplayStatics::OpenLevel(GetWorld(), FName("CH3_5_Level_1"));
+}
 
+void ACH3_5_PlayerController::GoToMainMenu()
+{
+	UE_LOG(LogTemp, Warning, TEXT("GoToMainMenu called!"));
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("GoToMainMenu called!"));
+	}
+
+	if (UCH3_5_GameInstance* CH3_5_GameInstance = Cast<UCH3_5_GameInstance>(UGameplayStatics::GetGameInstance(this)))
+	{
+		CH3_5_GameInstance->bShouldShowMainMenu = true;
+	}
+
+	SetPause(false);
+	UGameplayStatics::OpenLevel(GetWorld(), FName("CH3_5_Level_1"));
+}
+
+void ACH3_5_PlayerController::QuitGame()
+{
+	UKismetSystemLibrary::QuitGame(GetWorld(), this, EQuitPreference::Quit, false);
 }

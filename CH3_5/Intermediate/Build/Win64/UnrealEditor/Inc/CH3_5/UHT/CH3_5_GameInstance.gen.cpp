@@ -82,21 +82,21 @@ struct Z_Construct_UClass_UCH3_5_GameInstance_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TotalScore_MetaData[] = {
 		{ "Category", "GameData" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xc3\xbc \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
-#endif
 		{ "ModuleRelativePath", "Public/CH3_5_GameInstance.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xc3\xbc \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentLevelIndex_MetaData[] = {
+		{ "Category", "GameData" },
+		{ "ModuleRelativePath", "Public/CH3_5_GameInstance.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bShouldShowMainMenu_MetaData[] = {
 		{ "Category", "GameData" },
 		{ "ModuleRelativePath", "Public/CH3_5_GameInstance.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_TotalScore;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_CurrentLevelIndex;
+	static void NewProp_bShouldShowMainMenu_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShouldShowMainMenu;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -110,9 +110,15 @@ struct Z_Construct_UClass_UCH3_5_GameInstance_Statics
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_TotalScore = { "TotalScore", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCH3_5_GameInstance, TotalScore), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalScore_MetaData), NewProp_TotalScore_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_CurrentLevelIndex = { "CurrentLevelIndex", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCH3_5_GameInstance, CurrentLevelIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLevelIndex_MetaData), NewProp_CurrentLevelIndex_MetaData) };
+void Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_bShouldShowMainMenu_SetBit(void* Obj)
+{
+	((UCH3_5_GameInstance*)Obj)->bShouldShowMainMenu = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_bShouldShowMainMenu = { "bShouldShowMainMenu", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UCH3_5_GameInstance), &Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_bShouldShowMainMenu_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bShouldShowMainMenu_MetaData), NewProp_bShouldShowMainMenu_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCH3_5_GameInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_TotalScore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_CurrentLevelIndex,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCH3_5_GameInstance_Statics::NewProp_bShouldShowMainMenu,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCH3_5_GameInstance_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UCH3_5_GameInstance_Statics::DependentSingletons[])() = {
@@ -155,10 +161,10 @@ UCH3_5_GameInstance::~UCH3_5_GameInstance() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_GameInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCH3_5_GameInstance, UCH3_5_GameInstance::StaticClass, TEXT("UCH3_5_GameInstance"), &Z_Registration_Info_UClass_UCH3_5_GameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCH3_5_GameInstance), 1408591644U) },
+		{ Z_Construct_UClass_UCH3_5_GameInstance, UCH3_5_GameInstance::StaticClass, TEXT("UCH3_5_GameInstance"), &Z_Registration_Info_UClass_UCH3_5_GameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCH3_5_GameInstance), 601003373U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_GameInstance_h_721337205(TEXT("/Script/CH3_5"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_GameInstance_h_4264194330(TEXT("/Script/CH3_5"),
 	Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_GameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Project_CH3_5_CH3_5_Source_CH3_5_Public_CH3_5_GameInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

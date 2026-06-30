@@ -38,27 +38,6 @@ void ACH3_5_PlayerController::BeginPlay()
         }
     }
 
-    FString CurrentMapName = GetWorld()->GetMapName();
-    
-    // Print diagnostic information
-    FString ClassName = GetClass()->GetName();
-    FString MainMenuClassStr = MainMenuWidgetClass ? MainMenuWidgetClass->GetName() : TEXT("NULL");
-    FString GameOverClassStr = GameOverWidgetClass ? GameOverWidgetClass->GetName() : TEXT("NULL");
-
-    UE_LOG(LogTemp, Warning, TEXT("--- BeginPlay Diagnostic ---"));
-    UE_LOG(LogTemp, Warning, TEXT("Active Controller: %s"), *ClassName);
-    UE_LOG(LogTemp, Warning, TEXT("Map Name: %s"), *CurrentMapName);
-    UE_LOG(LogTemp, Warning, TEXT("MainMenuClass: %s"), *MainMenuClassStr);
-    UE_LOG(LogTemp, Warning, TEXT("GameOverClass: %s"), *GameOverClassStr);
-
-    if (GEngine)
-    {
-        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Active Controller: %s"), *ClassName));
-        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("Map Name: %s"), *CurrentMapName));
-        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("MainMenuClass: %s"), *MainMenuClassStr));
-        GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Cyan, FString::Printf(TEXT("GameOverClass: %s"), *GameOverClassStr));
-    }
-
     if (UCH3_5_GameInstance* CH3_5_GameInstance = Cast<UCH3_5_GameInstance>(UGameplayStatics::GetGameInstance(this)))
     {
         if (CH3_5_GameInstance->bShouldShowMainMenu)
@@ -75,12 +54,6 @@ UUserWidget* ACH3_5_PlayerController::GetHUDWidget() const
 
 void ACH3_5_PlayerController::ShowMainMenu()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ShowMainMenu called!"));
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("ShowMainMenu called!"));
-	}
-
 	if (HUDWidgetInstance)
 	{
 		HUDWidgetInstance->RemoveFromParent();
@@ -113,19 +86,11 @@ void ACH3_5_PlayerController::ShowMainMenu()
 		else
 		{
 			UE_LOG(LogTemp, Error, TEXT("Failed to Create Widget: MainMenuWidgetInstance"));
-			if (GEngine)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, TEXT("Failed to Create MainMenuWidget!"));
-			}
 		}
 	}
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("MainMenuWidgetClass is NULL in ShowMainMenu"));
-		if (GEngine)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, TEXT("MainMenuWidgetClass is NULL!"));
-		}
 	}
 }
 
@@ -216,12 +181,6 @@ void ACH3_5_PlayerController::StartGame()
 
 void ACH3_5_PlayerController::GoToMainMenu()
 {
-	UE_LOG(LogTemp, Warning, TEXT("GoToMainMenu called!"));
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("GoToMainMenu called!"));
-	}
-
 	if (UCH3_5_GameInstance* CH3_5_GameInstance = Cast<UCH3_5_GameInstance>(UGameplayStatics::GetGameInstance(this)))
 	{
 		CH3_5_GameInstance->bShouldShowMainMenu = true;

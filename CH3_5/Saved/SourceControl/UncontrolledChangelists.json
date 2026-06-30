@@ -7,7 +7,10 @@
 			"files": [
 				"C:/Unreal Project/CH3_5/CH3_5/Content/Blueprints/System/BP_CH3_5_PlayerController.uasset",
 				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_GameOver.uasset",
-				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_MainMenu.uasset"
+				"C:/Unreal Project/CH3_5/CH3_5/Content/UI/Widgets/WBP_MainMenu.uasset",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Maps/CH3_5_Level_2.umap",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Maps/CH3_5_Level_3.umap",
+				"C:/Unreal Project/CH3_5/CH3_5/Content/Maps/CH3_5_Level_1.umap"
 			]
 		}
 	]
